@@ -31,24 +31,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rvReport.setHasFixedSize(true)
-
         bottomNavigationView.background = null
         bottomNavigationView.menu.getItem(1).isEnabled = false
 
         populateMenu()
         populateDummy()
-        showRecyclerList()
 
 
 
 
-    }
-
-    private fun showRecyclerList() {
-        binding.rvReport.layoutManager = LinearLayoutManager(this)
-        val reportListAdapter = ReportListAdapter(list)
-        binding.rvReport.adapter = reportListAdapter
     }
 
     private fun populateDummy() {
