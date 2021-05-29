@@ -9,4 +9,6 @@
     <string name="menu_home">Home</string>
     <string name="menu_result">Result</string>
     <string name="action_settings">Setting</string>
+    <string name="menu_1">menu1</string>
+    <string name="menu_2">menu 2</string>
 </resources>
