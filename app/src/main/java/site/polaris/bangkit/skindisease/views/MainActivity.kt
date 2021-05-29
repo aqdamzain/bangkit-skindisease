@@ -51,7 +51,6 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.menu.getItem(1).isEnabled = false
 
         populateMenu()
-        populateDummy()
 
 
 
@@ -83,23 +82,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun configureOptionMenu(){
-        val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        findViewById<Toolbar>(R.id.toolbar)
-                .setupWithNavController(navController, appBarConfiguration)
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
-    private fun populateDummy() {
-        for (i in 1..10) {
-            list.add(Report("test", "test"))
-        }
-    }
 
     private fun populateMenu() {
         fab_cam.setOnClickListener {
