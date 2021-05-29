@@ -3,15 +3,17 @@ package site.polaris.bangkit.skindisease.views
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
@@ -20,6 +22,8 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 import site.polaris.bangkit.skindisease.R
 import site.polaris.bangkit.skindisease.databinding.ActivityMainBinding
 import site.polaris.bangkit.skindisease.models.Report
+import site.polaris.bangkit.skindisease.views.ui.info.InfoFragment
+import site.polaris.bangkit.skindisease.views.ui.result.ResultFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -63,6 +67,16 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_result, R.id.nav_info, R.id.menu_result), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.nav_result || destination.id == R.id.menu_result) {
+                bottomAppBar.visibility = View.GONE
+                fab_cam.visibility = View.GONE
+            } else {
+                bottomAppBar.visibility = View.VISIBLE
+                fab_cam.visibility = View.VISIBLE
+            }
+        }
     }
 
     private fun configureOptionMenu(){
@@ -79,24 +93,24 @@ class MainActivity : AppCompatActivity() {
 
     private fun populateDummy() {
         for (i in 1..10) {
-            list.add(Report("test","test"))
+            list.add(Report("test", "test"))
         }
     }
 
     private fun populateMenu() {
         fab_cam.setOnClickListener {
             if(ContextCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.CAMERA
-                ) == PackageManager.PERMISSION_GRANTED
+                            this,
+                            Manifest.permission.CAMERA
+                    ) == PackageManager.PERMISSION_GRANTED
             ){
                 val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
                 startActivityForResult(intent, CAMERA_REQUEST_CODE)
             }else{
                 ActivityCompat.requestPermissions(
-                    this,
-                    arrayOf(Manifest.permission.CAMERA),
-                    CAMERA_PERMISSION_CODE
+                        this,
+                        arrayOf(Manifest.permission.CAMERA),
+                        CAMERA_PERMISSION_CODE
                 )
             }
         }
@@ -121,10 +135,10 @@ class MainActivity : AppCompatActivity() {
                 startActivityForResult(intent, CAMERA_REQUEST_CODE)
             }else{
                 Toast.makeText(
-                    this,
-                    "Oops you just denied the permission for camera. " +
-                            "Don't worry you can allow it in the settings.",
-                    Toast.LENGTH_LONG
+                        this,
+                        "Oops you just denied the permission for camera. " +
+                                "Don't worry you can allow it in the settings.",
+                        Toast.LENGTH_LONG
                 ).show()
             }
         }
