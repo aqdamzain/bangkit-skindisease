@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SkinDisease">
+        android:theme="@style/Theme.MyNavigationDraw.NoActionBar">
         <activity android:name=".splash.SplashScreenActivity"></activity>
         <activity android:name=".views.MainActivity">
             <intent-filter>

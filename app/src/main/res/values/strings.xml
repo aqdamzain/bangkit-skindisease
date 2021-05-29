@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Skin Disease</string>
     <string name="splash">Skin Disease</string>
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_result">Result</string>
+    <string name="action_settings">Setting</string>
 </resources>
