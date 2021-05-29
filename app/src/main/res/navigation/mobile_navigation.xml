@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_info" />
 
     <fragment
-        android:id="@+id/menu1"
+        android:id="@+id/menu_result"
         android:name="site.polaris.bangkit.skindisease.views.ui.result.ResultFragment"
         android:label="@string/menu_result"
         tools:layout="@layout/fragment_result" />
