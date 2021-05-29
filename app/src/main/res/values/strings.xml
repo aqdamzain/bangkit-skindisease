@@ -12,4 +12,6 @@
     <string name="menu_1">menu1</string>
     <string name="menu_2">menu 2</string>
     <string name="menu_info">Info</string>
+    <string name="example_date">30/05/2021, 12:12</string>
+    <string name="example_sysmtom">chickenpox</string>
 </resources>
