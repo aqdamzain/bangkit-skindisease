@@ -28,4 +28,16 @@
         android:name="site.polaris.bangkit.skindisease.views.ui.result.ResultFragment"
         android:label="@string/menu_result"
         tools:layout="@layout/fragment_result" />
+
+    <fragment
+        android:id="@+id/botNav_home"
+        android:name="site.polaris.bangkit.skindisease.views.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/botNav_info"
+        android:name="site.polaris.bangkit.skindisease.views.ui.info.InfoFragment"
+        android:label="@string/menu_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

@@ -17,6 +17,7 @@ import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.app_bar_main.*
 import site.polaris.bangkit.skindisease.R
@@ -64,9 +65,12 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_home, R.id.nav_result, R.id.nav_info, R.id.menu_result), drawerLayout)
+                R.id.nav_home, R.id.nav_result, R.id.nav_info, R.id.menu_result, R.id.botNav_home, R.id.botNav_info),
+                drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+                .setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if(destination.id == R.id.nav_result || destination.id == R.id.menu_result) {
