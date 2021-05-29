@@ -30,7 +30,7 @@
             app:srcCompat="@color/cardview_dark_background"/>
 
         <TextView
-            android:id="@+id/tv_item_title"
+            android:id="@+id/tv_item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -47,7 +47,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -55,14 +55,14 @@
             android:text="@string/example_sysmtom"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_item_title"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_item1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/tv_item_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_item1"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/tv_item_des"
+            android:id="@+id/tv_item2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -73,21 +73,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/img_poster_prev"
-            app:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item1"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
+            android:id="@+id/tv_item_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="24dp"
             android:text="@string/example_date"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_item_des"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_item2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/tv_item_des"
-            app:layout_constraintTop_toTopOf="@+id/tv_item_des"
+            app:layout_constraintStart_toEndOf="@+id/tv_item2"
+            app:layout_constraintTop_toTopOf="@+id/tv_item2"
             app:layout_constraintVertical_bias="0.0" />
 
 
