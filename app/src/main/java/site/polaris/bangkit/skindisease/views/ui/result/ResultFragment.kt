@@ -1,5 +1,6 @@
 package site.polaris.bangkit.skindisease.views.ui.result
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import site.polaris.bangkit.skindisease.R
 import site.polaris.bangkit.skindisease.databinding.FragmentResultBinding
 import site.polaris.bangkit.skindisease.models.Report
+import site.polaris.bangkit.skindisease.views.ResultDetailActivity
 import site.polaris.bangkit.skindisease.views.adapters.ReportListAdapter
 
 class ResultFragment : Fragment() {
@@ -44,6 +46,17 @@ class ResultFragment : Fragment() {
         rvReport.layoutManager = LinearLayoutManager(this.context)
         val reportListAdapter = ReportListAdapter(list)
         rvReport.adapter = reportListAdapter
+
+        reportListAdapter.setOnItemClickCallback(object : ReportListAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Report) {
+                moveToDetail(data)
+            }
+        })
+    }
+
+    private fun moveToDetail(data: Report) {
+        val moveIntent = Intent(activity, ResultDetailActivity::class.java)
+        startActivity(moveIntent)
     }
 
     private fun populateDummy() {
