@@ -15,7 +15,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="italic"
-        android:textSize="30sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

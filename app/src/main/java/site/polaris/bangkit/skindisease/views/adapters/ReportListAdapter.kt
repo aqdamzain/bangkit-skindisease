@@ -1,11 +1,9 @@
 package site.polaris.bangkit.skindisease.views.adapters
 
-import android.graphics.BitmapFactory
-import android.util.Base64
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import site.polaris.bangkit.skindisease.Utils.base64toBitmap
 import site.polaris.bangkit.skindisease.databinding.ReportItemBinding
 import site.polaris.bangkit.skindisease.models.Report
