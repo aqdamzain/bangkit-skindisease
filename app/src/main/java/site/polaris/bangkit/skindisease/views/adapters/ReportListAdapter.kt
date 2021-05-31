@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import site.polaris.bangkit.skindisease.Utils.base64ToBitmap
-
 import site.polaris.bangkit.skindisease.databinding.ReportItemBinding
 import site.polaris.bangkit.skindisease.helper.ReportDiffCallback
 import site.polaris.bangkit.skindisease.models.Report
