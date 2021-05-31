@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bangkit"
     tools:context=".views.ui.info.InfoFragment">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
+        android:textStyle="bold"
         android:textSize="20sp"
         android:fontFamily="@font/amaranth"
         app:layout_constraintBottom_toBottomOf="parent"

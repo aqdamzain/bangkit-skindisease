@@ -5,7 +5,6 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_result">Result</string>
     <string name="action_settings">Setting</string>
@@ -14,4 +13,5 @@
     <string name="menu_info">Info</string>
     <string name="example_date">30/05/2021, 12:12</string>
     <string name="example_sysmtom">chickenpox</string>
+    <string name="home_page">Home Page</string>
 </resources>

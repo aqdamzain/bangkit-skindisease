@@ -4,19 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bangkit"
     tools:context="views.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.MyNavigationDraw.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/medium_blue"
-            app:popupTheme="@style/Theme.MyNavigationDraw.PopupOverlay" />
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:id="@+id/toolbar_tittle"
+            android:paddingTop="3dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/home_page"
+            android:textStyle="bold"
+            android:fontFamily="@font/amaranth"
+            app:layout_anchor="@+id/relativeLayout"
+            app:layout_anchorGravity="center"
+            android:layout_weight="1dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:ellipsize="end"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -36,6 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
             android:background="@android:color/transparent"
             app:menu="@menu/bottom_nav_menu" />
 
