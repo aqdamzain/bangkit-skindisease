@@ -8,7 +8,7 @@ import site.polaris.bangkit.skindisease.models.Report
 
 @Database(entities = [Report::class], version = 1)
 abstract class ReportRoomDatabase : RoomDatabase() {
-    abstract fun ReportDao(): ReportDao
+    abstract fun reportDao(): ReportDao
 
     companion object {
         @Volatile
