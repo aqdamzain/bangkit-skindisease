@@ -1,8 +1,9 @@
 package site.polaris.bangkit.skindisease.views
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_process.*
 import site.polaris.bangkit.skindisease.R
@@ -10,6 +11,9 @@ import site.polaris.bangkit.skindisease.Utils.base64ToBitmap
 import site.polaris.bangkit.skindisease.helper.DateHelper
 import site.polaris.bangkit.skindisease.helper.ViewModelFactory
 import site.polaris.bangkit.skindisease.models.Report
+import site.polaris.bangkit.skindisease.models.remote.ReportRequest
+import site.polaris.bangkit.skindisease.models.remote.ReportResponse
+
 
 class ProcessActivity : AppCompatActivity() {
 
@@ -25,17 +29,28 @@ class ProcessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_process)
 
-        processViewModel = obtainViewModel(this@ProcessActivity)
-        report = Report()
-
         val cameraResult = intent.getStringExtra(EXTRA_CAMERA_RESULT)
+
+        processViewModel = obtainViewModel(this@ProcessActivity)
+        processViewModel.postFeatures(ReportRequest(cameraResult)).observe(this,
+            object : Observer<ReportResponse?> {
+                override fun onChanged(response: ReportResponse?) {
+                    if(response != null){
+                        report?.title = response.disease
+                        report?.description = response.description
+                        report?.suggestion = response.suggestion
+                        report?.resultDate = DateHelper.getCurrentDate()
+
+                        processViewModel.insert(report as Report)
+                    }
+                }
+            })
+        report = Report()
 
         report.let { report ->
             report?.image = cameraResult
             report?.sendDate = DateHelper.getCurrentDate()
         }
-
-        processViewModel.insert(report as Report)
 
 
         button.setOnClickListener{
@@ -50,5 +65,16 @@ class ProcessActivity : AppCompatActivity() {
     private fun obtainViewModel(activity: AppCompatActivity): ProcessViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
         return ViewModelProvider(activity, factory).get(ProcessViewModel::class.java)
+    }
+
+    private val responseObserver = Observer<ReportResponse> { response ->
+        if(response != null){
+            report?.title = response.disease
+            report?.description = response.description
+            report?.suggestion = response.suggestion
+            report?.resultDate = DateHelper.getCurrentDate()
+
+            processViewModel.insert(report as Report)
+        }
     }
 }
