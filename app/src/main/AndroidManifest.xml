@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNavigationDraw.NoActionBar">
-        <activity android:name=".ProcessActivity"></activity>
+        <activity android:name=".views.ProcessActivity"></activity>
         <activity
             android:name=".views.ResultDetailActivity"
             android:screenOrientation="portrait" />

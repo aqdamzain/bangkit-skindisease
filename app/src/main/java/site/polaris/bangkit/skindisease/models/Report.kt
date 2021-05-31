@@ -29,5 +29,5 @@ data class Report(
     var sendDate: String? = null,
 
     @ColumnInfo(name = "result_date")
-    var resultDate: String? =null
+    var resultDate: String? = null
 ) : Parcelable

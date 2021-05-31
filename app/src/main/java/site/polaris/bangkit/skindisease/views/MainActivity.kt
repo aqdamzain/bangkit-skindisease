@@ -15,20 +15,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.app_bar_main.*
-import site.polaris.bangkit.skindisease.ProcessActivity
 import site.polaris.bangkit.skindisease.R
 import site.polaris.bangkit.skindisease.Utils.bitmapToBase64
 import site.polaris.bangkit.skindisease.databinding.ActivityMainBinding
 import site.polaris.bangkit.skindisease.models.Report
-import site.polaris.bangkit.skindisease.views.ui.info.InfoFragment
-import site.polaris.bangkit.skindisease.views.ui.result.ResultFragment
 
 class MainActivity : AppCompatActivity() {
 
