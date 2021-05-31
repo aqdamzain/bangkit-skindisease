@@ -8,8 +8,7 @@
 
     <item
         android:id="@+id/placeholder"
-        android:icon="@drawable/ic_baseline_photo_camera_24"
-        android:title="Camera" />
+        android:title=" " />
 
     <item
         android:id="@+id/botNav_info"
