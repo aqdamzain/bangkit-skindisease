@@ -1,8 +1,10 @@
 package site.polaris.bangkit.skindisease.views
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.Menu
@@ -20,7 +22,9 @@ import androidx.navigation.ui.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.app_bar_main.*
+import site.polaris.bangkit.skindisease.ProcessActivity
 import site.polaris.bangkit.skindisease.R
+import site.polaris.bangkit.skindisease.Utils.bitmapToBase64
 import site.polaris.bangkit.skindisease.databinding.ActivityMainBinding
 import site.polaris.bangkit.skindisease.models.Report
 import site.polaris.bangkit.skindisease.views.ui.info.InfoFragment
@@ -131,6 +135,18 @@ class MainActivity : AppCompatActivity() {
                                 "Don't worry you can allow it in the settings.",
                         Toast.LENGTH_LONG
                 ).show()
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode == Activity.RESULT_OK){
+            if(requestCode == CAMERA_REQUEST_CODE){
+                val cameraResult: Bitmap = data!!.extras!!.get("data") as Bitmap
+                val intent = Intent(this@MainActivity, ProcessActivity::class.java)
+                intent.putExtra(ProcessActivity.EXTRA_CAMERA_RESULT, bitmapToBase64(cameraResult))
+                startActivity(intent)
             }
         }
     }

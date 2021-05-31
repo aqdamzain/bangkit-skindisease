@@ -2,7 +2,7 @@ package site.polaris.bangkit.skindisease.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import site.polaris.bangkit.skindisease.Utils.base64toBitmap
+import site.polaris.bangkit.skindisease.Utils.base64ToBitmap
 import site.polaris.bangkit.skindisease.databinding.ActivityResultDetailBinding
 import site.polaris.bangkit.skindisease.models.Report
 
@@ -23,7 +23,7 @@ class ResultDetailActivity : AppCompatActivity() {
     }
 
     private fun populateView(data: Report) {
-        val image = base64toBitmap(data.image)
+        val image = base64ToBitmap(data.image)
         with(binding) {
             ivDetail.setImageBitmap(image)
             tvSDate.text = data.sendDate

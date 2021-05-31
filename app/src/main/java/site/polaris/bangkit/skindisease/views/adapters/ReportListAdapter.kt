@@ -1,12 +1,10 @@
 package site.polaris.bangkit.skindisease.views.adapters
 
-import android.graphics.BitmapFactory
-import android.util.Base64
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import site.polaris.bangkit.skindisease.Utils.base64toBitmap
+import site.polaris.bangkit.skindisease.Utils.base64ToBitmap
+
 import site.polaris.bangkit.skindisease.databinding.ReportItemBinding
 import site.polaris.bangkit.skindisease.models.Report
 
@@ -21,7 +19,7 @@ class ReportListAdapter(private val listReport: ArrayList<Report>) : RecyclerVie
     inner class ReportListHolder(private val binding: ReportItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(report: Report) {
-            val image = base64toBitmap(report.image)
+            val image = base64ToBitmap(report.image)
             with(binding) {
                 imgPosterPrev.setImageBitmap(image)
                 tvItemTitle.text = report.title
