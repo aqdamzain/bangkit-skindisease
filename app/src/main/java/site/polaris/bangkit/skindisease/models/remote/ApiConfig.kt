@@ -16,7 +16,6 @@ class ApiConfig {
             val retrofit = Retrofit.Builder()
                 .baseUrl("https://asia-southeast2-capstone-team-b21-cap0080.cloudfunctions.net/")
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(client)
                 .build()
             return retrofit.create(ApiService::class.java)
         }
