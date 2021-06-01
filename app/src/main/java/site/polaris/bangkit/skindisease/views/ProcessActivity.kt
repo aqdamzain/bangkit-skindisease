@@ -80,7 +80,8 @@ class ProcessActivity : AppCompatActivity() {
         }
 
         binding.detailButton.setOnClickListener{
-            val intent = Intent(this@ProcessActivity, MainActivity::class.java)
+            val intent = Intent(this@ProcessActivity, ResultDetailActivity::class.java)
+            intent.putExtra(ResultDetailActivity.EXTRA_RESULT, report as Report)
             startActivity(intent)
         }
     }
