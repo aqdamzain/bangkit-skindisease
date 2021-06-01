@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/medium_blue"
+    android:background="@drawable/side_nav_bar"
     android:padding="3dp"
     tools:context=".views.ui.result.ResultFragment">
 

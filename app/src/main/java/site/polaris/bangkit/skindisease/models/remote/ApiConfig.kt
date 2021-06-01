@@ -14,7 +14,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://asia-southeast2-capstone-team-b21-cap0080.cloudfunctions.net/")
+                .baseUrl("https://img-deploy-v3-ltkthlhzfq-et.a.run.app/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
             return retrofit.create(ApiService::class.java)
