@@ -43,6 +43,7 @@ class ProcessActivity : AppCompatActivity() {
         binding.detailButton.visibility = View.GONE
         binding.progressbar.visibility = View.GONE
         binding.tvLoading.visibility= View.GONE
+        binding.diseaseName.visibility = View.GONE
 
         binding.sendButton.setOnClickListener{
             binding.ivPreview.visibility = View.GONE
@@ -51,7 +52,9 @@ class ProcessActivity : AppCompatActivity() {
             processViewModel.postFeatures(ReportRequest(cameraResult)).observe(this,
                     { response ->
                         if (response != null) {
+                            binding.diseaseName.text = response.disease
                             binding.ivPreview.visibility = View.VISIBLE
+                            binding.diseaseName.visibility = View.VISIBLE
                             binding.cancelButton.visibility = View.GONE
                             binding.sendButton.visibility = View.GONE
                             binding.detailButton.visibility = View.VISIBLE
