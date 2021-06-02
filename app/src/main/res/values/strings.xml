@@ -14,4 +14,6 @@
     <string name="menu_info">Info</string>
     <string name="example_date">30/05/2021, 12:12</string>
     <string name="example_sysmtom">chickenpox</string>
+    <string name="disclaimer_content">Fitur-fitur dalam aplikasi ini sama sekali tidak digunakan sebagai satu-satunya metode untuk diagnosis atau untuk menggantikan keahlian dokter kulit. Ini hanya memberikan diagnosis dini dalam bentuk persentase probabilistik dan Anda perlu berkonsultasi lebih lanjut dengan dokter kulit.</string>
+    <string name="privacy_content">Aplikasi kami hanya mengirimkan data gambar ke server, kemudian menggunakan gambar tersebut langsung diproses oleh server tanpa menyimpan data gambar yang dikirim tersebut di server. Data gambar dan lainnya hanya tersimpan di aplikasi. Jika data atau aplikasi dihapus maka data akan terhapus dan tidak terpulihkan ketika aplikasi di-install kembali.</string>
 </resources>
