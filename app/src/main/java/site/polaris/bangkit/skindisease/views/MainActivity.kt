@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_home, R.id.nav_result, R.id.nav_info, R.id.menu_result, R.id.botNav_home, R.id.botNav_info),
+                R.id.nav_home, R.id.nav_result, R.id.nav_info, R.id.menu_info, R.id.botNav_home, R.id.botNav_result),
                 drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 .setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if(destination.id == R.id.nav_result || destination.id == R.id.menu_result) {
+            if(destination.id == R.id.nav_result || destination.id == R.id.menu_info) {
                 bottomAppBar.visibility = View.GONE
                 fab_cam.visibility = View.GONE
             } else {

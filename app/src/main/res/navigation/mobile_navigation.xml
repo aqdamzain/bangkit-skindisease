@@ -24,10 +24,10 @@
         tools:layout="@layout/fragment_info" />
 
     <fragment
-        android:id="@+id/menu_result"
-        android:name="site.polaris.bangkit.skindisease.views.ui.result.ResultFragment"
-        android:label="@string/menu_result"
-        tools:layout="@layout/fragment_result" />
+        android:id="@+id/menu_info"
+        android:name="site.polaris.bangkit.skindisease.views.ui.info.InfoFragment"
+        android:label="@string/menu_info"
+        tools:layout="@layout/fragment_info" />
 
     <fragment
         android:id="@+id/botNav_home"
@@ -36,8 +36,8 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/botNav_info"
-        android:name="site.polaris.bangkit.skindisease.views.ui.info.InfoFragment"
+        android:id="@+id/botNav_result"
+        android:name="site.polaris.bangkit.skindisease.views.ui.result.ResultFragment"
         android:label="@string/menu_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_result" />
 </navigation>

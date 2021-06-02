@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:menuCategory="container">
-        <item android:id="@+id/menu_result"
-            android:title="@string/menu_1"
-            android:icon = "@drawable/ic_experiment_results_white"
+        <item android:id="@+id/menu_info"
+            android:title="@string/menu_info"
+            android:icon = "@drawable/ic_baseline_info_24"
             app:showAsAction="always" />
     </group>
 </menu>

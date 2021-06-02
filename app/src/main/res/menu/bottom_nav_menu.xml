@@ -11,8 +11,8 @@
         android:title=" " />
 
     <item
-        android:id="@+id/botNav_info"
-        android:icon="@drawable/ic_baseline_info_24"
-        android:title="Info" />
+        android:id="@+id/botNav_result"
+        android:icon="@drawable/ic_experiment_results_black"
+        android:title="@string/menu_result" />
 
 </menu>
