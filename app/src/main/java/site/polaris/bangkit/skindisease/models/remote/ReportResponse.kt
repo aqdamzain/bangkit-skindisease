@@ -3,6 +3,10 @@ package site.polaris.bangkit.skindisease.models.remote
 import com.google.gson.annotations.SerializedName
 
 data class ReportResponse(
+
+    @field:SerializedName("prob")
+    val prob: String,
+
     @field:SerializedName("disease")
     val disease: String,
 

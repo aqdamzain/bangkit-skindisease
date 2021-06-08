@@ -82,6 +82,7 @@ class ProcessActivity : AppCompatActivity() {
                         binding.detailButton.visibility = View.VISIBLE
                         binding.progressbar.visibility = View.GONE
                         binding.tvLoading.visibility = View.GONE
+                        report?.prob = response.prob
                         report?.title = response.disease
                         report?.description = response.description
                         report?.suggestion = response.suggestion

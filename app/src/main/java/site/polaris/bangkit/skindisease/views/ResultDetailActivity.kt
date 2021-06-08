@@ -26,6 +26,7 @@ class ResultDetailActivity : AppCompatActivity() {
         val image = base64ToBitmap(data.image)
         with(binding) {
             ivDetail.setImageBitmap(image)
+            tvStatus.text = data.prob
             tvSDate.text = data.sendDate
             tvRDate.text = data.resultDate
             tvRName.text = data.title

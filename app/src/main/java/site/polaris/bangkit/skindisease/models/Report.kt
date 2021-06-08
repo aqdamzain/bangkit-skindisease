@@ -13,6 +13,9 @@ data class Report(
     @ColumnInfo(name = "id")
     var id: Int = 0,
 
+    @ColumnInfo(name = "prob")
+    var prob: String? = null,
+
     @ColumnInfo(name = "title")
     var title: String? = null,
 
