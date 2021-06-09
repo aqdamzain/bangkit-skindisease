@@ -11,6 +11,7 @@ With various researches that have been done regarding the role or potential of D
       * [Programming Language](#programming-language)
       * [Android Studio](#android-studio)
       * [Minimum Specification](#minimum-specification-to-run-android-studio)
+   * [Dependencies Used](#dependencies-used)
 <!--te-->
 
 ## Installation
