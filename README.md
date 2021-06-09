@@ -2,6 +2,17 @@
 
 With various researches that have been done regarding the role or potential of Deep Learning in the field of Dermatology, we hope to create a solution in the form of mobile application, that is able to detect and classify, at a certain confidence level, a potential skin disease from photographs taken and uploaded to the app. The aim is to help the user be more aware of their skin condition or disease they may have suffered from and the mobile app will provide information to the user regarding the disease and recommendation for further treatment.
 
+## Table of contents
+<!--ts-->
+   * [Tittle](#skin-disease-android-application)
+   * [Table of contents](#table-of-contents)
+   * [Installation](#installation)
+   * [Configuration](#configuration)
+      * [Programming Language](#programming-language)
+      * [Android Studio](#android-studio)
+      * [Minimum Specification](#minimum-specification-to-run-android-studio)
+<!--te-->
+
 ## Installation
 
 Clone this repository and import into **Android Studio**
